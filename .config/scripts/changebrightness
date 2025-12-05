@@ -1,0 +1,18 @@
+#!/bin/bash
+
+function send_notification() {
+	brightness=$(brightnessctl -m | cut -d, -f4)
+	notify-send -e -h string:synchronous:volume_brightness_notif -h int:value:"$brightness" -i "brightness" " Brightness: $brightness" -t 2000
+
+}
+
+case $1 in
+up)
+	brightnessctl  -n2 set 5%+
+	send_notification
+	;;
+down)
+	brightnessctl  -n2 set 5%-
+	send_notification
+	;;
+esac

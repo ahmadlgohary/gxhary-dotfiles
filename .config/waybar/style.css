@@ -1,0 +1,107 @@
+@import "mocha.css";
+
+* {
+  font-family: JetBrainsMono Nerd Font;
+  font-size: 15px;
+  min-height: 0;
+}
+
+#waybar {
+  background: transparent;
+  color: @text;
+  margin: 5px 5px;
+}
+
+#workspaces {
+  border-radius: 1rem;
+  margin: 5px;
+  background-color: @surface0;
+  margin-left:0;
+}
+
+#workspaces button {
+  color: @lavender;
+  border-radius: 1rem;
+  padding: 0.4rem;
+}
+
+#workspaces button.active ,
+#workspaces button:hover {
+  color: @peach;
+  border-radius: 1rem;
+}
+#workspaces button.urgent {
+  color: #ff2f4e;
+}
+
+#language,
+#network,
+#bluetooth,
+#backlight,
+#clock,
+#battery,
+#pulseaudio,
+#power-profiles-daemon,
+#custom-notification,
+#custom-power {
+  background-color: @surface0;
+  padding: 0.5rem 1rem;
+  margin: 5px 0;
+}
+
+#clock {
+  color: @blue;
+}
+
+#battery {
+  color: @green;
+}
+
+#battery.charging {
+  color: @green;
+}
+
+#battery.warning:not(.charging) {
+  color: @red;
+}
+
+#backlight {
+  color: @yellow;
+}
+
+#backlight, #battery {
+    border-radius: 0;
+}
+
+#pulseaudio, 
+#custom-power {
+  color: @maroon;
+  border-radius: 1rem 0px 0px 1rem;
+  margin-left: 1rem;
+}
+
+#custom-power {
+  color: @text;
+}
+
+#custom-music {
+  color: @mauve;
+  border-radius: 1rem;
+}
+
+#custom-lock {
+    border-radius: 1rem 0px 0px 1rem;
+    color: @lavender;
+}
+
+#custom-notification,
+#workspaces {
+    margin-right: 1rem;
+    border-radius: 0px 1rem 1rem 0px;
+    color: @red;
+}
+
+/* #tray {
+  margin-right: 1rem;
+  border-radius: 1rem;
+}  */

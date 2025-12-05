@@ -1,0 +1,105 @@
+/* ---------- Colors ---------- */
+@import "catppuccin-mocha.rasi"
+
+
+configuration {
+  modi: ["drun", "window", "run"];
+  location: 0;
+  drun-display-format: "{icon} {name}";
+  lines: 10;
+  columns: 1;
+  fixed-num-lines: true;
+  cycle: true;
+  matching: "fuzzy";
+  case-sensitive: false;
+  padding: 10;
+  display-drun: " ";
+  display-run: " ";
+  display-window: " ";
+  font: "CaskaydiaCove Nerd Font 18px";
+
+}
+
+/* ---------- Window ---------- */
+window {
+    width: 980px;
+    height: 530px;
+    location: 0;
+    border: 2px;
+    border-color: @lavender;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: @base;
+}
+
+/* ---------- Main Box ---------- */
+mainbox {
+    margin: 5px;
+    padding: 10px;
+    background-color: @base;
+}
+
+/* ---------- Input Bar ---------- */
+inputbar {
+    margin: 5px 20px;
+    padding: 10px;
+    border: 0;
+    border-radius: 0.1em;
+    background-color: @base;
+    text-color: @text;
+}
+
+/* Input Text */
+inputbar textbox {
+    text-color: @text;
+    border: 4px;
+    border-color: @red;
+}
+entry, prompt, case-indicator {
+  text-color: @text;
+}
+
+
+/* Input Icons */
+inputbar entry {
+    text-color: @red;
+}
+
+/* Outline effect */
+// inputbar focus{
+//     border: 4px;
+//     border-color:   @red;
+// }
+
+/* ---------- ListView ---------- */
+listview {
+    margin: 0px;
+    padding: 10px;
+    background-color: @base;
+}
+
+/* ---------- Elements ---------- */
+element {
+  padding:    10px ;
+  cursor:     pointer;
+  spacing:    10px ;
+  border:     0;
+  text-color: @text;
+}
+element normal.normal {
+  background-color: @base;
+  text-color:       @text;
+}
+
+element alternate.normal {
+  background-color: @base;
+  text-color:       @text;
+}
+
+element selected.normal {
+  background-color: @base;
+  text-color:       @mauve;
+  border: 0.11em;
+  border-color: @lavender;
+  border-radius: 5px;
+}

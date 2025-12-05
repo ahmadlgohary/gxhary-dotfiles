@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# Options
+shutdown="  Shutdown"
+reboot="  Reboot"
+lock="  Lock"
+suspend="  Suspend"
+logout="  Logout"
+
+# Rofi command
+if pgrep -x "rofi" > /dev/null; then
+  killall rofi
+else
+    chosen=$(printf "%s\n%s\n%s\n%s\n%s\n" "$shutdown" "$reboot" "$lock" "$suspend" "$logout" | rofi -dmenu -location 7)
+
+    case "$chosen" in
+        "$shutdown") shutdown now ;;
+        "$reboot") reboot ;;
+        "$lock") hyprlock ;;
+        "$suspend") systemctl suspend ;;
+        "$logout") hyprctl dispatch exit ;;
+    esac
+fi

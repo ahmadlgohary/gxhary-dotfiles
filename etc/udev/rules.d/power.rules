@@ -1,0 +1,8 @@
+# Rule for when switching to battery
+ACTION=="change", SUBSYSTEM=="power_supply", ATTRS{type}=="Mains", ATTRS{online}=="0", ENV{DISPLAY}=":0", RUN+="/usr/bin/su gxhary -c '~/.config/scripts/charging_notify.py 0'"
+# Rule for when switching to AC
+ACTION=="change", SUBSYSTEM=="power_supply", ATTRS{type}=="Mains", ATTRS{online}=="1", ENV{DISPLAY}=":0", RUN+="/usr/bin/su gxhary -c '~/.config/scripts/charging_notify.py 1'"
+
+
+
+
