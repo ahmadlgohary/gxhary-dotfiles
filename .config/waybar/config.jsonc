@@ -91,13 +91,13 @@
     },
     "pulseaudio": {
         "format": "{icon}  {volume}% {format_source}",
-        "format-bluetooth": "{volume}% {icon} {format_source}",
-        "format-bluetooth-muted": "  {icon} 0% {format_source}",
+        "format-bluetooth": "{icon}  {volume}% {format_source}",
+        "format-bluetooth-muted": "󰟎  0% {format_source}",
         "format-muted": "  0% {format_source}",
         "format-source-muted": "󰍭",
         "format-source": "",
         "format-icons": {
-            "headphone": "",
+            "headphone": "󰋋",
             "default": ["", "", "", "", "", "", "",  "",  "",  "",  "",  "", "", "", "", "", ""]
         },
         "on-click": "pavucontrol"
